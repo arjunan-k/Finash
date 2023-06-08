@@ -27,7 +27,7 @@ app.use(cors());
 
 // ROUTES
 app.use("/kpi", kpiRoutes);
-app.use("/product", productRoutes)
+app.use("/product", productRoutes);
 
 // MOONGOOSE SETUP
 const PORT = process.env.PORT || 9000;
@@ -43,6 +43,5 @@ mongoose
     // await mongoose.connection.db.dropDatabase();
     // KPI.insertMany(kpis)
     // Product.insertMany(products)
-
   })
   .catch((error) => console.log(`${error}, did not connect`));
