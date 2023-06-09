@@ -6,8 +6,6 @@ import { useMemo } from "react";
 import {
   ScatterChart,
   Scatter,
-  AreaChart,
-  Area,
   XAxis,
   YAxis,
   ZAxis,
@@ -15,10 +13,7 @@ import {
   ResponsiveContainer,
   Line,
   CartesianGrid,
-  Legend,
   LineChart,
-  BarChart,
-  Bar,
   PieChart,
   Pie,
   Cell,
@@ -139,7 +134,7 @@ const Row2 = () => {
               dataKey="value"
             >
               {pieData.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={pieColors[index]} />
+                <Cell key={`cell-${index}-${entry}`} fill={pieColors[index]} />
               ))}
             </Pie>
           </PieChart>

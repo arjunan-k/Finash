@@ -1,6 +1,6 @@
 import { useGetKpisQuery } from "@/state/api";
 import { Box, Button, Typography, useTheme } from "@mui/material";
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import DashboardBox from "@/components/DashboardBox";
 import FlexBetween from "@/components/FlexBetween";
 import {
@@ -25,7 +25,7 @@ const Predictions = () => {
     if (!kpiData) return [];
     const monthData = kpiData[0].monthlyData;
 
-    const formatted: Array<Datapoint> = monthData.map(
+    const formatted: Array<DataPoint> = monthData.map(
       ({ revenue }, i: number) => {
         return [i, revenue];
       }
