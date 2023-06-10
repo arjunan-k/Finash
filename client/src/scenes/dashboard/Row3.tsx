@@ -70,7 +70,7 @@ const Row3 = () => {
       flex: 0.67,
     },
     {
-      field: "price",
+      field: "amount",
       headerName: "Amount",
       flex: 0.35,
       renderCell: (params: GridCellParams) => `$${params.value}`,
